@@ -13,8 +13,8 @@ Array,Write a program to cyclically rotate an array by one.,yes,,
 Array,find Largest sum contiguous Subarray [V. IMP],yes,,
 Array,Minimise the maximum difference between heights [V.IMP],<->,,
 Array,Minimum no. of Jumps to reach end of an array,yes,,revise
-Array,find duplicate in an array of N+1 Integers,<->,,
-Array,Merge 2 sorted arrays without using Extra space.,<->,,
+Array,find duplicate in an array of N+1 Integers,yes,,tortoise method
+Array,Merge 2 sorted arrays without using Extra space.,yes,,gap method … detail approach in copy
 Array,Kadane's Algo [V.V.V.V.V IMP],<->,,
 Array,Merge Intervals,<->,,
 Array,Next Permutation,<->,,
