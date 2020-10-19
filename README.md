@@ -1,2 +1,2 @@
 # DSA-cracker-sheet
-I would uploading solution to some specific problem only
+I would be uploading solutions to some specific problem only
