@@ -11,15 +11,15 @@ Array,Move all the negative elements to one side of the array ,yes,,quicksort ap
 Array,Find the Union and Intersection of the two sorted arrays.,yes,,
 Array,Write a program to cyclically rotate an array by one.,yes,,
 Array,find Largest sum contiguous Subarray [V. IMP],yes,,
-Array,Minimise the maximum difference between heights [V.IMP],<->,,
+Array,Minimise the maximum difference between heights [V.IMP],yes,,revise
 Array,Minimum no. of Jumps to reach end of an array,yes,,revise
 Array,find duplicate in an array of N+1 Integers,yes,,tortoise method
 Array,Merge 2 sorted arrays without using Extra space.,yes,,gap method … detail approach in copy
-Array,Kadane's Algo [V.V.V.V.V IMP],<->,,
-Array,Merge Intervals,<->,,
-Array,Next Permutation,<->,,
-Array,Count Inversion,<->,,
-Array,Best time to buy and Sell stock,<->,,
+Array,Kadane's Algo [V.V.V.V.V IMP],yes,imp,
+Array,Merge Intervals,yes,,
+Array,Next Permutation,yes,,logic written in copy
+Array,Count Inversion,yes,,mergesort concept
+Array,Best time to buy and Sell stock,yes,,
 Array,find all pairs on integer array whose sum is equal to given number,<->,,
 Array,find common elements In 3 sorted arrays,<->,,
 Array,Rearrange the array in alternating positive and negative items with O(1) extra space,<->,,
