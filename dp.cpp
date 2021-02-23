@@ -66,3 +66,42 @@ int main(){
     }
     return 0;
 }
+
+
+//Given an integer array nums, return the length of the longest strictly increasing subsequence.
+
+int lengthOfLIS(vector<int>& nums) {
+      vector<int> vec(nums.size(), 1);
+        int maxval=1;
+        for(int i=1;i<nums.size();i++){
+            for(int j=0;j<i;j++){
+                if (nums[j]<nums[i]){
+                    vec[i]=max(vec[j]+1, vec[i]);
+                    
+                    
+                }
+                
+                
+            }
+        if (maxval<vec[i]){
+            maxval=vec[i];
+            
+        }
+            
+            
+        }
+        
+       return maxval; 
+    }
+
+
+
+
+
+
+
+
+
+
+
+
