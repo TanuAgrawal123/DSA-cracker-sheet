@@ -170,3 +170,88 @@ Node *binaryTreeToBST (Node *root)
 //LCA of two nodes in BST
 /* Approach:
 For Binary search tree, while traversing the tree from top to bottom the first node which lies in between the two numbers n1 and n2 is the LCA of the nodes, i.e. the first node n with the lowest depth which lies in between n1 and n2 (n1<=n<=n2) n1 < n2. So just recursively traverse the BST in, if node's value is greater than both n1 and n2 then our LCA lies in the left side of the node, if it's is smaller than both n1 and n2, then LCA lies on the right side. Otherwise, the root is LCA (assuming that both n1 and n2 are present in BST).*/
+
+//question vvvv imp : Largest BST in BT
+
+/*A Tree is BST if following is true for every node x. 
+ 
+
+The largest value in left subtree (of x) is smaller than value of x.
+The smallest value in right subtree (of x) is greater than value of x.*/
+
+
+struct Info{
+    int sz;
+    int max;
+    int min;
+    int ans;
+    bool isBST;
+    
+};
+
+Info largestbst(Node *root){
+    if(root==NULL){
+        return{0, INT_MIN, INT_MAX, 0, true};
+    }
+    if(root->left==NULL && root->right==NULL ){
+        return{1, root->data, root->data, 1, true};
+    }
+        Info l, r;
+        l=largestbst(root->left);
+        r=largestbst(root->right);
+        Info ret;
+        ret.sz=l.sz+r.sz+1;
+        if(l.isBST && r.isBST && l.max < root->data && r.min > root->data)
+        {
+            ret.min=min(l.min, min(root->data, r.min));
+            ret.max=max(r.max, max(root->data, l.max));
+            ret.ans=ret.sz;
+            ret.isBST=true;
+            return ret;
+        }
+        ret.ans=max(l.ans, r.ans);
+        ret.isBST=false;
+        return ret;
+        
+        }
+int largestBst(Node *root)
+{
+   return largestbst(root).ans; 
+}
+
+// Question : Binary Tree to DLL
+class Solution
+{
+    public:
+    void BTODLL(Node *root, Node **head, Node**prev){
+        if (root==NULL)
+        return;
+        
+        
+        BTODLL(root->left, head, prev);
+        if(*prev==NULL)
+        {
+            *head=root;
+            
+            
+        }
+        else{
+        root->left=(*prev);
+        (*prev)->right=root;
+            
+        }
+        (*prev)=root;
+        BTODLL(root->right, head, prev);
+    }
+    Node * bToDLL(Node *root)
+    {
+        Node *head=NULL;
+        Node *prev=NULL;
+        BTODLL(root, &head ,&prev);
+        return head;
+    }
+};
+
+
+
+
